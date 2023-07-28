@@ -96,7 +96,7 @@ class User(object):
             popup1.title("Delete USER")
             popup1.geometry("400x400")
             photo = PhotoImage(file="Logo.png")
-            popup_delete.iconphoto(False,photo)
+            popup1.iconphoto(False,photo)
             
             def delete():
                 
@@ -149,7 +149,8 @@ class User(object):
             popup3.geometry("400x400")
             popup3.title("Change User")
             photo = PhotoImage(file="Logo.png")
-            popup_change.iconphoto(False,photo)
+            popup3.iconphoto(False,photo)
+            
 
             def change():
                 

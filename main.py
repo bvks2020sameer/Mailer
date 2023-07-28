@@ -15,16 +15,17 @@ butt1.pack(pady=20)
 
 #Send Mail
 
-f = open("current.status","r")
-cred = f.read().split(" ")
+
 from mail_send import mail_send
-m = mail_send(cred[0],cred[1],main)
+m = mail_send(main)
 
 butt2 = Button(main,text="Send Mail",height=10,width=50,font=("Roman",13,"bold"),bg = "#10b328",fg="#056e25",command=m.send_mails)
 butt2.pack(pady=20)
 
 #Read mail
-butt3 = Button(main,text="Read",height=10,width=50,font=("Roman",13,"bold") ,bg = "#0dd6c2",fg="#0e078f")
+from mail_read import mail_read
+m = mail_read(main)
+butt3 = Button(main,text="Read",height=10,width=50,font=("Roman",13,"bold") ,bg = "#0dd6c2",fg="#0e078f",command=m.mail_reads)
 butt3.pack(pady=20)
 
 main.mainloop()

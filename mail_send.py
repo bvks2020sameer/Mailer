@@ -11,9 +11,11 @@ import pandas as pd
 
 class mail_send(object):
 
-    def __init__(self,sender_mail:str,passwd:str,toplevel):
-        self.sender_mail = sender_mail
-        self.passwd = passwd
+    def __init__(self,toplevel):
+        f = open("current.status","r")
+        cred = f.read().split(" ")
+        self.sender_mail = cred[0]
+        self.passwd = cred[1]
         self.toplevel = toplevel
         return None
 

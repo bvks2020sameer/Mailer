@@ -1,7 +1,7 @@
 This is Mailer An Email Automation Tool 
 
 !!! Donot delete the logo file "Logo.png" !!!
-
+* Download the 3 files Logo.png , Readme.txt and Mailer.exe in a single folder
 Instructions for Account Setup :
 	* Login to your gmail Account 
 	* Go to My Account > Security > 2-Step Verification 

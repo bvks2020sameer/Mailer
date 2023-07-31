@@ -1,15 +1,16 @@
+#Logic Tested Ok
+
+
 import imaplib
 import email
 from tkinter import *
 
 
 class mail_read(object):
-    def __init__(self,toplevel):
+    def __init__(self,toplevel,email,passwd):
         self.toplevel = toplevel
-        f = open("current.status","r")
-        cred = f.read().split(" ")
-        self.Email = cred[0]
-        self.passwd = cred[1]
+        self.Email = email
+        self.passwd = passwd
         self.arr = list()
         return None
     
@@ -86,9 +87,12 @@ class mail_read(object):
     
 """
 main = Tk()
-m = mail_read(main)
+email1 = "mailer.service.public@gmail.com"
+passwd = "ozlhpygpbuzubkom"
+m = mail_read(main,email1,passwd)
 butt1 = Button(main,text = "press here",command=m.mail_reads)
 butt1.pack()
 main.mainloop()
 
 """
+

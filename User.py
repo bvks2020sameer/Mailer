@@ -18,7 +18,6 @@ class User(object):
             print("Table Created")
 
         window = Toplevel(self.toplevel)
-        #window = Tk()
         window.geometry("1000x800")
         window.title("User Management")
         photo = PhotoImage(file="Logo.png")
@@ -49,8 +48,7 @@ class User(object):
             popup = Toplevel(window)
             popup.title("Enter Details")
             popup.geometry("400x400")
-            photo = PhotoImage(file="Logo.png")
-            popup.iconphoto(False,photo)
+          
             
             #add name
 
@@ -95,8 +93,7 @@ class User(object):
             popup1 = Tk()
             popup1.title("Delete USER")
             popup1.geometry("400x400")
-            photo = PhotoImage(file="Logo.png")
-            popup1.iconphoto(False,photo)
+           
             
             def delete():
                 
@@ -148,8 +145,7 @@ class User(object):
             popup3 = Tk()
             popup3.geometry("400x400")
             popup3.title("Change User")
-            photo = PhotoImage(file="Logo.png")
-            popup3.iconphoto(False,photo)
+       
             
 
             def change():
@@ -203,5 +199,14 @@ class User(object):
 
         return None
 
-#u = User("hello")
-#u.user_db()
+"""
+
+main = Tk()
+email1 = "mailer.service.public@gmail.com"
+passwd = "ozlhpygpbuzubkom"
+m = User(main)
+butt1 = Button(main,text = "press here",command=m.user_db)
+butt1.pack()
+main.mainloop()
+
+"""

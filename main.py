@@ -44,13 +44,14 @@ def run():
 
     return None
 
-run()
 
-"""
+
+key = 0
 if os.path.isfile("current.status") == False :
     
     from setup_repair import setup_repair
     setup_repair().setup()
+    key = 1
 
 try :
     
@@ -62,8 +63,9 @@ try :
     
 
 except:
-    from setup_repair import setup_repair
-    setup_repair().setup()
+    if key == 0 :
+        from setup_repair import setup_repair
+        setup_repair().setup()
 
 
-"""
+
